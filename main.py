@@ -38,19 +38,4 @@ if st.button("🎤 Gerar Narração com gTTS"):
             st.error(f"❌ Erro ao gerar a narração: {str(e)}")
 
 # Exemplo extra: manipulação de vídeos de acervo
-st.markdown("---")
-st.subheader("🧪 Teste de download e corte de vídeo (modo demonstração)")
 
-url_video = st.text_input("📥 Link do vídeo de acervo (Pexels, Pixabay, etc.)")
-
-if st.button("⬇️ Baixar e cortar vídeo"):
-    if url_video:
-        try:
-            caminho_video = baixar_video(url_video)
-            caminho_editado = cortar_video(caminho_video, inicio=0, fim=10)  # 10 segundos como exemplo
-            st.video(caminho_editado)
-            st.success("🎉 Vídeo baixado e cortado com sucesso!")
-        except Exception as e:
-            st.error(f"Erro ao processar vídeo: {e}")
-    else:
-        st.warning("⚠️ Insira a URL do vídeo antes de continuar.")
