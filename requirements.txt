@@ -2,4 +2,4 @@ streamlit>=1.18.0
 moviepy>=1.0.3
 requests>=2.28.0
 python-dotenv>=0.21.0
-coqui-ai-tts>=1.1.2
+gTTS>=2.2.4
